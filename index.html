@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.1">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Contact form</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- TODO: make this div accesible -->
+  <div class="form__confirmation" aria-hidden="true">
+    <p class="message-confirmation"><img src="/assets/images/icon-success-check.svg" alt="">Message Sent!</p>
+    <p>Thanks for completing the form. We'll be in touch soon!</p>
+  </div>
+  <form action="" class="form" id="contact" name="contact">
+    <h1>Contact us</h1>
+    <div class="grid__labels">
+      <label for="first-name">First name (required)
+        <input aria-describedby="first-name-validation" type="text" id="first-name" name='first-name' required
+          autocomplete="given-name">
+        <p class="error-message" id="first-name-validation">This file is required</p>
+      </label>
+      <label for="last-name"> Last name (required)
+        <input aria-describedby="last-name-validation " type="text" required id="last-name" name="last-name"
+          autocomplete="family-name">
+        <p class="error-message" id="last-name-validation">This file is required</p>
+      </label>
+    </div>
+    <label for="email-user">Email Address (required)
+      <input aria-describedby="email-validation-message" type="email" id="email-user" required name="email-user"
+        autocomplete="email">
+      <p class="error-message" id="email-validation-message">Please enter a valid email address</p>
+    </label>
+
+    <fieldset>
+      <legend>Query Type</legend>
+      <div class="grid__labels">
+        <label for="general" class="inline">
+          <input required aria-describedby="radio-validation" type="radio" name="query" id="general"
+            value="general">General
+          Enquiry
+        </label>
+
+        <label for="support" class="inline">
+          <input required aria-describedby="radio-validation" type="radio" name="query" id="support"
+            value="support">Support
+          Request
+        </label>
+      </div>
+      <p class="error-message radio" id="radio-validation">Please select a query type</p>
+    </fieldset>
+
+    <div>
+      <label for="message">Message (required)</label>
+      <textarea aria-describedby="message-validation" name="message" id="message" required></textarea>
+      <p class="error-message" id="message-validation">This field is required</p>
+    </div>
+
+    <div class="flex__checkbox">
+      <input type="checkbox" id="consent" name="consent" aria-label="consent about being contacted checkbox">
+      <label for="consent"> I consent to being contacted by the team</label>
+    </div>
+    <p class="error-message checkbox">To submit this form, please consent to being contacted</p>
+    <!-- <p class="checkbox-text"></p>-->
+    <button>Submit</button>
+  </form>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+    Coded by <a href="#" target="_blank">Gonzalo Perez</a>.
+  </div>
+  <script src="main.js"></script>
+</body>
+
+</html>
